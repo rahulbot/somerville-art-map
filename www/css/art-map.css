@@ -1,0 +1,71 @@
+h1 {
+	text-align: center;
+}
+
+h2.subhead {
+	text-align: center;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.leaflet-div-icon {
+	background: transparent;
+	border: none;
+}
+ 
+.number {
+	font-size: 14px;
+	font-weight: bold;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+}
+
+.leaflet-marker-icon .number{
+	position: relative;
+	top: -23px;
+}
+
+.sam-art-piece-list .sam-art-piece {
+	padding: 3px;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+}
+
+.sam-number{
+	position: absolute;
+	line-height: 25px;
+	display: block;
+}
+
+.sam-number-background {
+	position: absolute;
+}
+
+.leaflet-control-attribution {
+	display: none !important;
+}
+
+.sam-footer {
+	margin-top: 15px;
+}
+
+#sam-map {
+	height: 300px;
+	margin-bottom: 15px;
+}
+
+.bring-to-top{
+	z-index: 900 !important;
+	opacity: 1.0;
+}
+
+.faded {
+	opacity: 0.2;
+}
+
+.only-print {
+	display: none;
+}

@@ -1,0 +1,7 @@
+.do-not-print {
+	display: none;
+}
+
+.only-print {
+	display: inline-block;
+}
