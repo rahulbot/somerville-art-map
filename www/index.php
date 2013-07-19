@@ -119,14 +119,15 @@ var layer = new L.StamenTileLayer("toner");
 var map = new L.Map("sam-map", {
     center: new L.LatLng(42.38, -71.099),
     zoom: 10,
-    maxZoom: 15,	// don't zoom in too much
-    zoomControl: false
+    maxZoom: 17,	// don't zoom in too much
+    /*zoomControl: false*/
 });
 // turn off zooming - we want a static map here
-map.dragging.disable();
+/*map.dragging.disable();
 map.touchZoom.disable();
 map.doubleClickZoom.disable();
 map.scrollWheelZoom.disable();
+*/
 map.addLayer(layer);
 // now add the pins to the map
 var markers = [];	// a list of all the markers
@@ -151,6 +152,8 @@ $('.sam-thumbnail').click(function(){
 	//marker.attr('data-z-index',marker.css('z-index'));	// save originial z-index
 	marker.removeClass('faded').addClass('bring-to-top');	// bring to top
 	$('html, body').animate({scrollTop: 0}, 500);
+	// center on the marker
+	map.panTo(markers[number-1].getLatLng());
 });
 </script>
 
