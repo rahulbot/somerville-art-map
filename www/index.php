@@ -38,11 +38,11 @@ $neighborhood_list = array_unique($neighborhood_list);
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
     <link href="css/leaflet.css" rel="stylesheet" type="text/css">
-    <link href="css/art-map.css" rel="stylesheet" type="text/css">
-	<link href="css/art-map-print.css" rel="stylesheet" type="text/css" media="print"/>
-    <!--[if lte IE 8]>
+	<!--[if lte IE 8]>
     	<link href="css/leaflet.ie.css" rel="stylesheet">
     <![endif]-->
+    <link href="css/art-map.css" rel="stylesheet" type="text/css">
+	<link href="css/art-map-print.css" rel="stylesheet" type="text/css" media="print"/>
 </head>
 
 <body>
@@ -108,10 +108,10 @@ $neighborhood_list = array_unique($neighborhood_list);
 
 </div>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="http://leaflet.cloudmade.com/dist/leaflet.js"></script>
-<script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.2"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/leaflet.js"></script>
 <script type="text/javascript" src="js/leaflet-numbered-markers.js"></script>
+<script type="text/javascript" src="js/tile.stamen.js"></script>
 
 <script type="text/javascript">
 // set up the map
@@ -134,8 +134,8 @@ var markers = [];	// a list of all the markers
 	var marker = L.marker([<?php echo $art_piece->latitude?>, <?php echo $art_piece->longitude?>], {
 		icon: new L.NumberedDivIcon({number: <?php echo $art_piece->number?>})
 	});
-markers.push(marker);
-marker.addTo(map);
+	markers.push(marker);
+	marker.addTo(map);
 <?php } ?>
 // zoom to the extents of the markers
 var group = new L.featureGroup(markers);
