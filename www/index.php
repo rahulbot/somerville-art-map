@@ -115,10 +115,9 @@ $neighborhood_list = array_unique($neighborhood_list);
 
 <script type="text/javascript">
 // set up the map
-var layer = new L.StamenTileLayer("toner");
+var tileLayer = new L.StamenTileLayer("toner");
 var map = new L.Map("sam-map", {
     center: new L.LatLng(42.38, -71.099),
-    zoom: 10,
     maxZoom: 17,	// don't zoom in too much
     /*zoomControl: false*/
 });
@@ -128,7 +127,7 @@ map.touchZoom.disable();
 map.doubleClickZoom.disable();
 map.scrollWheelZoom.disable();
 */
-map.addLayer(layer);
+map.addLayer(tileLayer);
 // now add the pins to the map
 var markers = [];	// a list of all the markers
 <?php foreach ($art_pieces as $art_piece){ ?>
@@ -165,7 +164,6 @@ $('.sam-thumbnail').click(function(){
 
   ga('create', 'UA-42576470-1', 'somervilleartmap.org');
   ga('send', 'pageview');
-
 </script>
 
 </body>
