@@ -79,7 +79,7 @@ $neighborhood_list = array_unique($neighborhood_list);
 					<img class="sam-number-background" src="img/marker-square.png"/>
 					<div class="number sam-number"><?php print $art_piece->number; ?></div>
 					<img class="sam-thumbnail" src="<?php print $art_piece->thumbnail_url; ?>" alt="<?php print $art_piece->name; ?>"
-							name="<?php print $art_piece->name; ?>" data-number="<?php print $art_piece->number; ?>"/>
+							name="<?php print $art_piece->name; ?>" width="125" height="125" data-number="<?php print $art_piece->number; ?>"/>
 				</div>
 				<?php } ?>
 			</div>
