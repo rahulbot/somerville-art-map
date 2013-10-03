@@ -87,9 +87,9 @@ neighborhoods.each do |neighborhood|
 			item['address'] = (cells[3] / "div.street-address").first.innerText.strip if (cells[3] / "div.street-address").first
 			item['address']+= " , Somerville, MA" if not item['address'].nil? and not item['address'].include? "Somerville"
 			item['created_date'] = cells[4].innerText.strip
-			item['thumbnail_url'] = (cells[0] / "a > img").first.attributes['src']
-			item['medium_url'] = item['thumbnail_url'].gsub('public_art_view','porchfest_photo')
-			item['full_url'] = item['thumbnail_url'].gsub('imagecache/public_art_view/','')
+			item['thumbnail_url'] = (cells[0] / "a > img").first.attributes['src'] unless (cells[0] / "a > img").first.nil?
+			item['medium_url'] = item['thumbnail_url'].gsub('public_art_view','porchfest_photo') unless item['thumbnail_url'].nil?
+			item['full_url'] = item['thumbnail_url'].gsub('imagecache/public_art_view/','') unless item['thumbnail_url'].nil?
 			item['latitude'] = nil
 			item['longitude'] = nil
 			# and geocode it!
