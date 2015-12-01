@@ -13,7 +13,7 @@ NEIGHBORHOOD_BASE_URL = "http://www.somervilleartscouncil.org/artmap?field_publi
 
 # wrapper around a cache a webpages (name id md5 hash of url, contents are raw HTML)
 def cached_wget(url, override_cache=false)
-	print "  Fetching #{url}"
+	puts "  Fetching #{url}"
 	cache_file_name = File.join CACHE_DIR, Digest::MD5.hexdigest(url)
 	if override_cache or not File.exists? cache_file_name
 		File.open(cache_file_name, 'w') do |cache_file|  
