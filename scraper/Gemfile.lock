@@ -1,7 +1,7 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
-    geocoder (1.1.8)
+    geocoder (1.2.2)
     hpricot (0.8.6)
 
 PLATFORMS
@@ -10,3 +10,6 @@ PLATFORMS
 DEPENDENCIES
   geocoder
   hpricot
+
+BUNDLED WITH
+   1.10.3
